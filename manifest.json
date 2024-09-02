@@ -4,7 +4,7 @@
     "Version": "1.0.0",
     "Description": "Bringing plant magic in Stardew Valley.",
     "UniqueID": "djpicard.agraria",
-    "UpdateKeys": [], // when you release the mod, see https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Update_checks
+    "UpdateKeys": ["Nexus:27470"], // when you release the mod, see https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Update_checks
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
     }

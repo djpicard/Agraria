@@ -1,0 +1,11 @@
+{
+    "Name": "Agraria",
+    "Author": "djpicard",
+    "Version": "1.0.0",
+    "Description": "Bringing plant magic in Stardew Valley.",
+    "UniqueID": "djpicard.agraria",
+    "UpdateKeys": ["Nexus:2400", "Nexus:5098"], // when you release the mod, see https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Update_checks
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

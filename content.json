@@ -1,0 +1,20 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+        "ConfigSchema": {
+            "EnableJohn": {
+                "AllowValues": "true, false",
+                "Default": true
+            }
+        },
+        "Changes": [
+            {
+                "Action": "Include",
+                "FromFile": "assets/john.json",
+                "When": {
+                    "EnableJohn": true
+                }
+            }
+        ]
+    ]
+}

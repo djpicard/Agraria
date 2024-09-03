@@ -1,0 +1,78 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+        {
+            "LogName": "Add objects into the shop for {{ModId}}_Burning_Passion",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "{{ModId}}_Burning_Passion": {
+                    "Id": "{{ModId}}_Burning_Passion",
+                    "ItemId": "{{ModId}}_Burning_Passion",
+                    "ObjectInternalName": "{{ModId}}_Burning_Passion",
+                    "Price": 1
+                }
+            },
+            "MoveEntries": [
+                {
+                    "ID": "{{ModId}}_Burning_Passion",
+                    "BeforeID": "(O)630"
+                }
+            ]
+        },
+        {
+            "LogName": "Load objects for {{ModId}}_Burning_Passion",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Burning_Passion": {
+                    "Name": "{{ModId}}_Burning_Passion", 
+                    "Displayname": "Magic Flower",
+                    "Description": "Flower that will keep the surrounding areas warm.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "LogName": "Added gift taste for {{ModId}}_Burning_Passion",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Love"],
+                    "Value": "{{ModId}}_Burning_Passion",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        {
+            "LogName": "Added crop for {{ModId}}_Burning_Passion",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_Burning_Passion": {
+                    "Seasons": [ "spring", "summer", "fall" ],
+                    "DaysInPhase": [ 1, 1, 1, 1, 1 ],
+                    "HarvestItemId": "{{ModId}}_Burning_Passion",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "LogName": "Load textures for {{ModId}}_Burning_Passion",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Crops",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+        }
+    ]
+}

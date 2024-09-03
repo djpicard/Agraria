@@ -1,0 +1,83 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+        {
+            "LogName": "Add objects into the shop for {{ModId}}_Magic_Flower",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "{{ModId}}_Magic_Flower": {
+                    "Id": "{{ModId}}_Magic_Flower",
+                    "ItemId": "{{ModId}}_Magic_Flower",
+                    "ObjectInternalName": "{{ModId}}_Magic_Flower",
+                    "Price": 1
+                }
+            },
+            "MoveEntries": [
+                {
+                    "ID": "{{ModId}}_Magic_Flower",
+                    "BeforeID": "(O)630"
+                }
+            ]
+        },
+        {
+            "LogName": "Load objects for {{ModId}}_Magic_Flower",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Magic_Flower": {
+                    "Name": "{{ModId}}_Magic_Flower", 
+                    "Displayname": "Magic Flower",
+                    "Description": "Strange seed that radiates a mysterious energy.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0,
+                    "ContextTags": [
+                        "color_red",
+                        "dye_medium",
+                        "flower_item"
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Added gift taste for {{ModId}}_Magic_Flower",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Love"],
+                    "Value": "{{ModId}}_Magic_Flower",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        {
+            "LogName": "Added crop for {{ModId}}_Magic_Flower",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_Magic_Flower": {
+                    "Seasons": [ "spring", "summer", "fall" ],
+                    "DaysInPhase": [ 1, 1, 1, 1, 1 ],
+                    "HarvestItemId": "{{ModId}}_Magic_Flower",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "LogName": "Load textures for {{ModId}}_Magic_Flower",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Crops",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+        }
+    ]
+}

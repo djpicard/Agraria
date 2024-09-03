@@ -1,19 +1,21 @@
 {
     "Format": "2.3.0",
-    "ConfigSchema": {
-        "EnableJohn": {
-            "AllowValues": "true, false",
-            "Default": true
-        }
-    },
     "Changes": [
         {
             "Action": "Include",
-            "FromFile": "assets/john.json",
-            "When": {
-                "EnableJohn": true
-            }
+            "FromFile": "Data/magic_flower.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "Data/burning_passion.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "Data/item_trap.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "Data/water_lily.json"
         }
     ]
-
 }

@@ -1,0 +1,83 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+        {
+            "LogName": "Add objects into the shop for {{ModId}}_Item_Trap",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "{{ModId}}_Item_Trap": {
+                    "Id": "{{ModId}}_Item_Trap",
+                    "ItemId": "{{ModId}}_Item_Trap",
+                    "ObjectInternalName": "{{ModId}}_Item_Trap",
+                    "Price": 1
+                }
+            },
+            "MoveEntries": [
+                {
+                    "ID": "{{ModId}}_Item_Trap",
+                    "BeforeID": "(O)630"
+                }
+            ]
+        },
+        {
+            "LogName": "Load objects for {{ModId}}_Item_Trap",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Item_Trap": {
+                    "Name": "{{ModId}}_Item_Trap", 
+                    "Displayname": "Magic Flower",
+                    "Description": "Holds a single item for a ritual.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0,
+                    "ContextTags": [
+                        "color_red",
+                        "dye_medium",
+                        "flower_item"
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Added gift taste for {{ModId}}_Item_Trap",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Love"],
+                    "Value": "{{ModId}}_Item_Trap",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        {
+            "LogName": "Added crop for {{ModId}}_Item_Trap",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_Item_Trap": {
+                    "Seasons": [ "spring", "summer", "fall" ],
+                    "DaysInPhase": [ 1, 1, 1, 1, 1 ],
+                    "HarvestItemId": "{{ModId}}_Item_Trap",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "LogName": "Load textures for {{ModId}}_Item_Trap",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Crops",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+        }
+    ]
+}

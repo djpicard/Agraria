@@ -1,0 +1,83 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+        {
+            "LogName": "Add objects into the shop for {{ModId}}_Water_Lily",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "{{ModId}}_Water_Lily": {
+                    "Id": "{{ModId}}_Water_Lily",
+                    "ItemId": "{{ModId}}_Water_Lily",
+                    "ObjectInternalName": "{{ModId}}_Water_Lily",
+                    "Price": 1
+                }
+            },
+            "MoveEntries": [
+                {
+                    "ID": "{{ModId}}_Water_Lily",
+                    "BeforeID": "(O)630"
+                }
+            ]
+        },
+        {
+            "LogName": "Load objects for {{ModId}}_Water_Lily",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Water_Lily": {
+                    "Name": "{{ModId}}_Water_Lily", 
+                    "Displayname": "Magic Flower",
+                    "Description": "Flower that will keep surrounding areas watered.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0,
+                    "ContextTags": [
+                        "color_red",
+                        "dye_medium",
+                        "flower_item"
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Added gift taste for {{ModId}}_Water_Lily",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Love"],
+                    "Value": "{{ModId}}_Water_Lily",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        {
+            "LogName": "Added crop for {{ModId}}_Water_Lily",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_Water_Lily": {
+                    "Seasons": [ "spring", "summer", "fall" ],
+                    "DaysInPhase": [ 1, 1, 1, 1, 1 ],
+                    "HarvestItemId": "{{ModId}}_Water_Lily",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "LogName": "Load textures for {{ModId}}_Water_Lily",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Crops",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+        }
+    ]
+}

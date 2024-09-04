@@ -1,5 +1,4 @@
 {
-    "Format": "2.3.0",
     "Changes": [
         {
             "LogName": "Add objects into the shop for {{ModId}}_Item_Trap",
@@ -69,7 +68,7 @@
                     "DaysInPhase": [ 1, 1, 1, 1, 1 ],
                     "HarvestItemId": "{{ModId}}_Item_Trap",
                     "Texture": "Mods/{{ModId}}/Crops",
-                    "SpriteIndex": 0
+                    "SpriteIndex": 1
                 }
             }
         },
@@ -77,7 +76,8 @@
             "LogName": "Load textures for {{ModId}}_Item_Trap",
             "Action": "Load",
             "Target": "Mods/{{ModId}}/Crops",
-            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+            "FromFile": "assets/{{TargetWithoutPath}}.png" , // assets/Crops.png, assets/Objects.png
+            "Priority": "Low"
         }
     ]
 }

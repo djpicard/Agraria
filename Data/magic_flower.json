@@ -1,5 +1,4 @@
 {
-    "Format": "2.3.0",
     "Changes": [
         {
             "LogName": "Add objects into the shop for {{ModId}}_Magic_Flower",
@@ -77,7 +76,8 @@
             "LogName": "Load textures for {{ModId}}_Magic_Flower",
             "Action": "Load",
             "Target": "Mods/{{ModId}}/Crops",
-            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Crops.png, assets/Objects.png
+            "FromFile": "assets/{{TargetWithoutPath}}.png", // assets/Crops.png, assets/Objects.png
+            "Priority": "Low"
         }
     ]
 }

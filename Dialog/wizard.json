@@ -1,0 +1,11 @@
+{
+    "Changes": [ //This is where you tell Content Patcher what changes to the game your mod is making
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "Entries": {
+                "AcceptGift_(0)djpicard.agraria_Magic_Flower": "@!... Where did you get this!$a$b|This is magic long forgotten that was held by the druids$0|This is all I have on the subject"
+            }
+        }
+    ]
+}

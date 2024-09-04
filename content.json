@@ -3,6 +3,10 @@
     "Changes": [
         {
             "Action": "Include",
+            "FromFile": "Dialog/wizard.json"
+        },
+        {
+            "Action": "Include",
             "FromFile": "Data/magic_flower.json"
         },
         {
